@@ -1,33 +1,17 @@
 // theme color variables
-$primary: #326dee;
-$secondary: #1ac888;
-$error: #d32752;
-$info: #f6c31c;
+$wind: #B7D2BF;
+$earth: #E1C7B1;
+$fire: #BDACC1;
 
 // color palettes
 $colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-    "error": $error,
-    "info": $info,
-    "blue": #1919e6,
-    "red": #e61919,
-    "yellow": #e6e619,
-    "green": #19e635,
-    "orange": #ffa600,
-    "purple": #90f,
+    "wind": $wind,
+    "earth": $earth,
+    "fire": $fire,
     "gray": #808080,
     "black": #000,
     "white": #fff
 );
-
-
-
-// @debug map-get($colors, "purple");
-// @debug map-has-key($colors, "secondary");
-// @debug map-has-key($colors, "tertiary");
-// @debug map-remove($colors, "primary");
-// @debug map-merge($colors, ("pink": #ffc0cb));
 
 // spacing
 $base-padding: 0.75rem;
@@ -35,10 +19,10 @@ $base-margin: 0.75rem;
 
 // borders
 $base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-radius: 100px;
 
 // box-shadow
-$base-box-shadow: 1px 3px 5px rgb(0,0,0,0.1);
+$base-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 
 // font sizes
 $base-font-size: 1rem;

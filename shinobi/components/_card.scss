@@ -1,25 +1,47 @@
 @use 'sass:math';
 
-.card {
-    display: block;
-    padding: $base-padding;
+@mixin card($bg-color: $wind) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: ($base-padding * 2) ($base-padding * 5) ;
     border: $base-border-thickness solid #ddd;
     box-shadow: $base-box-shadow;
-    border-radius: math.div($base-border-radius, 4);
+    border-radius: $base-border-radius;
+    background: linear-gradient(111.34deg, mix(white, $bg-color, 3 * 10) 0%, mix(black, $bg-color, 1 * 10) 100%);
+    color: mix(black, $bg-color, 5 * 10);
 
     .card-title {
         font-size: $font-size-lg;
-        padding-bottom: $base-padding;
         font-weight: bold;
+    }
+
+    .card-subtitle {
+        font-size: $base-font-size;
+        font-style: italic;
     }
 
     .card-body {
         font-size: $base-font-size;
-
         a {
             text-decoration: underline;
         }
+        a:hover {
+            color: white;
+        }
+    }
+
+    img {
+        width: 20rem;
     }
 }
 
-//  
+.card {
+    @include card;
+}
+
+@each $key, $val in $colors {
+    .card-#{$key} {
+        @include card($val)
+    }
+}
